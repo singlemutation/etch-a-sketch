@@ -3,4 +3,13 @@
     width: 960px;
     display: flex;
     border: black 3px solid;
+    flex-wrap: wrap;
+}
+
+.grid-box {
+    box-sizing: border-box;
+    border: black 1px solid;
+    margin: 0;
+    padding: 0;
+    flex: 1;
 }
