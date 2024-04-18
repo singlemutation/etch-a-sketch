@@ -14,4 +14,12 @@ function makeGrid(gridSize){
     };
 };
 
-makeGrid(16);
+makeGrid(50);
+
+const gridBoxes = document.querySelectorAll(".grid-box");
+gridBoxes.forEach((gridBox) => {
+    gridBox.addEventListener("mouseover", () => {
+        gridBox.style.backgroundColor = "black";
+    });
+});
+    
