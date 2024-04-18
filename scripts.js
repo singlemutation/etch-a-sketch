@@ -14,12 +14,26 @@ function makeGrid(gridSize){
     };
 };
 
-makeGrid(50);
+    
+const button = document.querySelector("button");
+const input = document.querySelector("input");
 
-const gridBoxes = document.querySelectorAll(".grid-box");
-gridBoxes.forEach((gridBox) => {
+button.addEventListener("click", () => {
+    const gridsize = input.value;
+    if ((gridsize > 100) || (gridsize < 1)){
+        alert("Please enter a number between 1 and 100");
+        container.innerHTML = '';
+        return;
+    };
+    input.value = '';
+    container.innerHTML = '';
+    makeGrid(gridsize);
+
+    const gridBoxes = document.querySelectorAll(".grid-box");
+    gridBoxes.forEach((gridBox) => {
     gridBox.addEventListener("mouseover", () => {
         gridBox.style.backgroundColor = "black";
+        });
     });
 });
-    
+
